@@ -48,7 +48,7 @@ const TableRowData = ({tableData, index}) => {
         {showText(lastName , 16)}
       </NameDiv>
       <EmailDiv>
-        {showText(email , 17)}
+        {showText(email , 16)}
       </EmailDiv>
       <StatusDiv>
         {status || ''}
