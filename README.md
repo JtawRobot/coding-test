@@ -27,6 +27,7 @@ Install dependencies
 ## development notes:
 
 - App Created using Create React APP (CRA).
+- App currently hosted at [https://main.d3ntno046yu4fa.amplifyapp.com/]
 - Used styled components for development convenience.
 - Used default app font family.
 - Used Colors that are similar/close to what was shown in the instructions. 
