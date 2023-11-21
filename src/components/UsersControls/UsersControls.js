@@ -6,7 +6,7 @@ import editIcon from '../../assets/icons/edit-icon.svg';
 import deleteIcon from '../../assets/icons/delete-icon.svg';
 import OperationButton from './OperationButton';
 import { UsersContext } from '../../Users';
-import { debouncer } from '../../utils/utils';
+import { debouncer, evaluateSearch } from '../../utils/utils';
 import Tooltip from '../UtilComponents/Tooltip';
 
 
@@ -74,7 +74,7 @@ const UserControls = () => {
   const onSearch = (e) => {
     e.preventDefault();
     const value = e.target.value;
-    setSearchString(value);
+    setSearchString(value.replaceAll(' ', '').toLowerCase());
   };
 
   const debounceOnSearch = debouncer(onSearch, 200);
@@ -88,7 +88,7 @@ const UserControls = () => {
       />
       <GapLine />
       <Tooltip
-        label={<OperationButton srcIcon={editIcon} operation="EDIT" onOperationClick={onOperationClick} alt='edit icon' disabled={!usersList.length || !usersList.filter((data) => data.id.includes(searchString)).length}/>} 
+        label={<OperationButton srcIcon={editIcon} operation="EDIT" onOperationClick={onOperationClick} alt='edit icon' disabled={!usersList.length || !usersList.filter((data) => evaluateSearch(data, searchString)).length}/>} 
         text={'Edit User'}
         control={true}
       />

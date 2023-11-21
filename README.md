@@ -19,10 +19,11 @@ Install dependencies
 - App has 2 initial values named 'John Doe', and 'Richard Smith'.
 - Controls available within the table are  'ADD', 'EDIT', 'DELETE', 'SORT', 'SEARCH'.
 - Can ADD anytime.
-- Can Edit only when the list is not empty (Button disabled if list is empty).
+- Can Edit only when the list/table is not empty (Button disabled if list is empty).
 - Can Delete when there is a selected user (Button disabled if nothing selected).
 - Sort is only alphabetical ascending and date created ascending.
 - SEARCH can be done at the upper right corner input and results displayed directly at the table.
+- SEARCH applicable for id, first name, last name and email.
 
 ## development notes:
 

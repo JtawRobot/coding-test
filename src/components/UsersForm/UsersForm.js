@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { UsersContext } from '../../Users';
 import UsersFormInput from './UsersFormInput';
 import UsersFormMessage from './UsersFormMessage';
-import { validateEmail } from '../../utils/utils';
+import { evaluateSearch, validateEmail } from '../../utils/utils';
 
 const UsersFormBody = styled.div`
   width: 320px;
@@ -199,7 +199,7 @@ const UsersForm = () => {
         {showForm.type === 'EDIT' && 
           <UserSelect value={selectedIndex} onChange={onEditUserchange}>
             <SelectUserOption value="default" disabled>Select User</SelectUserOption>
-            {usersList.map((data, index) => (<SelectUserOption display={data?.id?.includes(searchString) ? 'default' : 'none'} 
+            {usersList.map((data, index) => (<SelectUserOption display={evaluateSearch(data, searchString) ? 'default' : 'none'} 
             key={`${index} ${data.firstName}`} value={index}> {`${data.firstName} ${data.lastName} (${data.id})`} </SelectUserOption>))}
           </UserSelect>}
         <FormItemLabel>

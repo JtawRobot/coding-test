@@ -37,7 +37,7 @@ export const validateEmail = (email) => {
   const emailCorrectPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
   const testResult = emailCorrectPattern.test(email.toLowerCase());
   return testResult;
-}
+};
 
 export const debouncer = (func, timeinms) => {
   let timer;
@@ -49,4 +49,8 @@ export const debouncer = (func, timeinms) => {
       func.apply(context, args);
     }, timeinms);
   };
-}
+};
+
+export const evaluateSearch = (data, searchString="") => {
+    return data?.id?.includes(searchString) || data?.firstName?.includes(searchString) || data?.lastName?.includes(searchString) || data?.email?.includes(searchString);
+};

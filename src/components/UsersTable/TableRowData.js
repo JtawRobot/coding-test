@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { CheckDiv, DateDiv, EmailDiv, NameDiv, StatusDiv, TableRow, UserIdDiv } from './CommonCSS';
-import { showText } from '../../utils/utils';
+import { evaluateSearch, showText } from '../../utils/utils';
 import { UsersContext } from '../../Users';
 
 const TableRowDataDiv = styled(TableRow)`
@@ -34,7 +34,7 @@ const TableRowData = ({tableData, index}) => {
   };
 
   return (
-    <TableRowDataDiv display={id?.includes(searchString) ? 'flex' : 'none'}>
+    <TableRowDataDiv display={ evaluateSearch(tableData, searchString) ? 'flex' : 'none'}>
       <CheckDiv >
       <TableCheckBoxInput checked={checked} type='checkbox' onChange={onCheckboxChange}  />
       </CheckDiv>
