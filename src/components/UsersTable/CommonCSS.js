@@ -55,14 +55,14 @@ export const EmailDiv = styled.div`
 
 export const StatusDiv = styled.div`
   ${commonCssProps};
-  max-width: 120px;
-  min-width: 120px;
+  max-width: 140px;
+  min-width: 140px;
 `;
 
 export const DateDiv = styled.div`
   ${commonCssProps};
-  max-width: 200px;
-  min-width: 200px;
+  max-width: 220px;
+  min-width: 220px;
 `;
 
 export const TableCheckBoxInput = styled.input`

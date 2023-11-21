@@ -36,7 +36,7 @@ const Backdrop = styled(UsersLayout)`
 `;
 
 const UsersBody = styled.div`
-  max-width: 1000px;
+  max-width: 1040px;
   width: fit-content;
   border: 1px solid #A7B5C2;
   min-height: 176px;
