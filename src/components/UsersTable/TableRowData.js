@@ -39,22 +39,22 @@ const TableRowData = ({tableData, index}) => {
       <TableCheckBoxInput checked={checked} type='checkbox' onChange={onCheckboxChange}  />
       </CheckDiv>
       <UserIdDiv >
-        {showText(id, 14)}
+        {showText(id, 12)}
       </UserIdDiv>
       <NameDiv>
-        {showText(firstName , 18)}
+        {showText(firstName , 16)}
       </NameDiv>
       <NameDiv>
-        {showText(lastName , 18)}
+        {showText(lastName , 16)}
       </NameDiv>
       <EmailDiv>
-        {showText(email , 18)}
+        {showText(email , 16)}
       </EmailDiv>
       <StatusDiv>
         {status || ''}
       </StatusDiv>
       <DateDiv >
-        {showText(created?.toString(), 23)}
+        {showText(created?.toString(), 21)}
       </DateDiv>
     </TableRowDataDiv>
   )
